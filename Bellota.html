@@ -37,18 +37,32 @@
 
     .fondo::after{
         content: "❤";
-        font-size: 80px; /* Tamaño del corazón */
-        color: #caf2cd; /* Color del corazón */
+        font-size: 80px; 
+        color: #caf2cd; 
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-right: 50px;
+        animation: float 3s infinite ease-in-out alternate;
     }
 
+    @keyframes float {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-5px); }
+    }
+    
     .buttercup{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .buttercup .ojos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 0%;
     }
 
     /*Pelo atrás*/
@@ -90,12 +104,24 @@
         justify-content: space-between; /* Separa los ojos */
         align-items: center; /* Centra verticalmente */
         width: 100%; /* Ocupar todo el ancho disponible */
-        padding: 0 0%; /* Ajusta separación desde los bordes */
+        padding: 25% 15%; /* Ajusta separación desde los bordes */
+    }
+
+    .cara > .ojos {
+        padding: 1.5% 1.5%;
+    }
+
+    .ojo + .ojo {
+        margin-left: 20px;
+    }
+
+    .ojo ~ .sonrisa {
+        margin-top: 200px;
     }
 
     /* Estilos de los ojos */
     .ojo {
-        width: 45%;
+        width: 50%;
         aspect-ratio: 1/1; /* Ancho = alto */
         border: var(--border);
         background-color: white; /* Color ojo */
@@ -107,8 +133,17 @@
         overflow: hidden; /* Para que todo lo que salga del contenedor se esconda */
     }
 
+    .ojo:first-child {
+        background-color: #ffffff;
+    }
+
+    .ojo:last-child {
+        background-color: #f0f0f0;
+    }
+
+    /* Iris y pupilas */
     .iris-l{
-        width: 100%;
+        width: 90%;
         height: 90%;
         background-color: #5dd866;
         border-radius: 80%;
@@ -118,30 +153,8 @@
         align-items: center;
         justify-content: center;
     }
-
-    .pupila-l {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end; /* Mueve el brillo a la derecha */
-        width: 70%;
-        height: 90%;
-        background-color: black;
-        border-radius: 50%;
-
-    }
-
-    .pupila-l::after {
-        content: "";
-        width: 40%;
-        aspect-ratio: 1/1;
-        background-color: white;
-        border-radius: 50%;
-        margin-right: 25%; 
-        margin-top: -10%;
-    }
-
     .iris-r{
-        width: 100%;
+        width: 90%;
         height: 90%;
         background-color: #5dd866;
         border-radius: 80%;
@@ -152,32 +165,34 @@
         justify-content: center;
     }
 
-    .pupila-r{
+    .pupila-l, .pupila-r {
         display: flex;
         align-items: center;
-        justify-content: flex-end; /* Mueve el brillo a la derecha */
-        width: 70%;
+        justify-content: flex-end;
+        width: 80%;
         height: 80%;
         background-color: black;
         border-radius: 50%;
+
     }
 
-    .pupila-r::after {
+    .pupila-l::after, .pupila-r::after {
         content: "";
-        width: 40%;
+        width: 50%;
         aspect-ratio: 1/1;
         background-color: white;
         border-radius: 50%;
-        margin-right: 35%; 
+
+        margin-right: 20%; 
         margin-top: -10%;
     }
 
     .sonrisa {
-        width: 50px; /* Aumentamos el ancho */
-        height: 25px; /* Hacemos la curva más sutil */
+        width: calc(40px + 2%);
+        height: 25px;
         border: var(--border);
-        border-radius: 0 0 50px 50px; /* Hace la curva más amplia */
-        border-top: none; /* Eliminamos la parte superior */
+        border-radius: 0 0 50px 50px;
+        border-top: none;
     }
 
 
@@ -206,7 +221,6 @@
 </style>
 </head>
 <body>
-    <!--<h1 style="color: aqua; font-size: 35px;">Bellota</h1> -->
 
     <div class="fondo">
         <div class="buttercup">
