@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
-    <link rel ="stylesheet" href="ejemplo.css">
 
 <style>
     *{
@@ -26,24 +25,43 @@
     }
 
     .buttercup{
-    width: max-content;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        /*width: max-content;
+        margin: auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Cara Burbuja */
+    /*Pelo atrás*/
+    .pelo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 380px;
+        height: 390px;
+        border: 170px solid;
+        border-radius: 50%;
+        /*background-color: black;*/
+        border-top: transparent;
+        border-right: transparent;
+        border-left: transparent;
+        
+    }
+
+    /* Cara */
     .cara{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         width: 320px;
         height: 270px;
         border: var(--border);
         background-color: #FFDCC8; /* Color cara */
         border-radius: 50%; /* Hace cara redonda */
+        margin-top: -275px;
         overflow: hidden;
     }
 
@@ -67,6 +85,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: -35px;
         overflow: hidden; /* Para que todo lo que salga del contenedor se esconda */
     }
 
@@ -144,17 +163,31 @@
         border-left: transparent;
     }
 
+    .fleco-l {
+        width: 200px; /* Ajusta según el tamaño de la cara */
+        height: 150px;
+        background-color: black;
+        border: var(--border);
+        border-radius: 100px 100px 0 0; /* Hace que los bordes sean redondeados */
+        margin-top: -80px; 
+        margin-right: 120px;
+        clip-path: polygon(0% 100%, 10% 10%, 50% 0%, 100% 0%, 60% 100%); /* Corta en "V" */
+    }
 
     
-
 </style>
 </head>
 <body>
     <!--<h1 style="color: aqua; font-size: 35px;">Bellota</h1> -->
     <div class="buttercup">
-        <div class ="cara">
 
-            <!--<div class="fleco">-->
+        <div class="pelo"></div>
+
+        <div class ="cara">
+            
+            <div class="fleco-l"></div>
+            <div class="fleco-r"></div>
+
             <div class="ojos">
                 <div class="ojo">
                     <div class="iris-l">
@@ -168,14 +201,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="sonrisa"></div>
 
         </div>
-         <!--Como la sonrisa pero mas grande y atrás de cara, tal vez haya q ponerlo antes-->
-        <div class="pelo"></div>
-        <div class="pelo pelo-r"></div>
-        
     </div>
+
 </body>
 </html>
