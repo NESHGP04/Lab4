@@ -16,17 +16,36 @@
         --border: 4px solid; /* Le da valores a los bordes */
     }
 
+    /*Fondo*/
+
     body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #db84e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #8de396;
+    }
+
+    .fondo{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #8de396;
+    }
+
+    .fondo::after{
+        content: "❤";
+        font-size: 80px; /* Tamaño del corazón */
+        color: #caf2cd; /* Color del corazón */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 50px;
     }
 
     .buttercup{
-        /*width: max-content;
-        margin: auto; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -188,33 +207,35 @@
 </head>
 <body>
     <!--<h1 style="color: aqua; font-size: 35px;">Bellota</h1> -->
-    <div class="buttercup">
 
-        <div class="pelo"></div>
+    <div class="fondo">
+        <div class="buttercup">
 
-        <div class ="cara">
-            
-            <div class="fleco-l"></div>
-            <div class="fleco-r"></div>
-
-            <div class="ojos">
-                <div class="ojo">
-                    <div class="iris-l">
-                        <div class="pupila-l"></div>
+            <div class="pelo"></div>
+    
+            <div class ="cara">
+                
+                <div class="fleco-l"></div>
+                <div class="fleco-r"></div>
+    
+                <div class="ojos">
+                    <div class="ojo">
+                        <div class="iris-l">
+                            <div class="pupila-l"></div>
+                        </div>
+                    </div>
+        
+                    <div class="ojo">
+                        <div class="iris-r">
+                            <div class="pupila-r"></div>
+                        </div>
                     </div>
                 </div>
     
-                <div class="ojo">
-                    <div class="iris-r">
-                        <div class="pupila-r"></div>
-                    </div>
-                </div>
+                <div class="sonrisa"></div>
+    
             </div>
-
-            <div class="sonrisa"></div>
-
         </div>
     </div>
-
 </body>
 </html>
