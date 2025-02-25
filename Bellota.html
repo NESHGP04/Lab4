@@ -38,11 +38,10 @@
         align-items: center;
         justify-content: center;
 
-        width: 380px;
+        width: 375px;
         height: 390px;
         border: 170px solid;
         border-radius: 50%;
-        /*background-color: black;*/
         border-top: transparent;
         border-right: transparent;
         border-left: transparent;
@@ -92,8 +91,9 @@
     .iris-l{
         width: 100%;
         height: 90%;
-        background-color: rgb(98, 216, 82);
+        background-color: #5dd866;
         border-radius: 80%;
+        margin-left: 5%;
 
         display: flex;
         align-items: center;
@@ -108,6 +108,7 @@
         height: 90%;
         background-color: black;
         border-radius: 50%;
+
     }
 
     .pupila-l::after {
@@ -116,14 +117,16 @@
         aspect-ratio: 1/1;
         background-color: white;
         border-radius: 50%;
-        margin-right: 50%; /* Ajusta la posición del brillo */
+        margin-right: 25%; 
+        margin-top: -10%;
     }
 
     .iris-r{
         width: 100%;
         height: 90%;
-        background-color: rgb(78, 195, 87);
+        background-color: #5dd866;
         border-radius: 80%;
+        margin-right: 5%;
 
         display: flex;
         align-items: center;
@@ -146,34 +149,40 @@
         aspect-ratio: 1/1;
         background-color: white;
         border-radius: 50%;
-        margin-right: 50%; /* Ajusta la posición del brillo */
+        margin-right: 35%; 
+        margin-top: -10%;
     }
 
-    .sonrisa{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 20px;
-        height: 20px;
+    .sonrisa {
+        width: 50px; /* Aumentamos el ancho */
+        height: 25px; /* Hacemos la curva más sutil */
         border: var(--border);
-        border-radius: 50%;
-        border-top: transparent;
-        border-right: transparent;
-        border-left: transparent;
+        border-radius: 0 0 50px 50px; /* Hace la curva más amplia */
+        border-top: none; /* Eliminamos la parte superior */
     }
+
 
     .fleco-l {
-        width: 200px; /* Ajusta según el tamaño de la cara */
+        width: 260px; 
         height: 150px;
         background-color: black;
         border: var(--border);
-        border-radius: 100px 100px 0 0; /* Hace que los bordes sean redondeados */
+        border-radius: 100px 100px 0 0; 
         margin-top: -80px; 
-        margin-right: 120px;
-        clip-path: polygon(0% 100%, 10% 10%, 50% 0%, 100% 0%, 60% 100%); /* Corta en "V" */
+        margin-right: 100px;
+        clip-path: polygon(0% 100%, 10% 10%, 50% 0%, 80% 0%, 60% 100%); /* Corta en "V" */
     }
 
+    .fleco-r {
+        width: 310px; 
+        height: 150px;
+        background-color: black;
+        border: var(--border);
+        border-radius: 100px 100px 0 0; 
+        margin-top: -150px; 
+        margin-left: 245px;
+        clip-path: polygon(60% 100%, 100% 50%, 50% 40%, 0% 0%, 20% 100%); /* Corta en "V" */
+    }
     
 </style>
 </head>
