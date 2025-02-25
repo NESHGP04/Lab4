@@ -6,26 +6,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <link rel ="stylesheet" href="ejemplo.css">
+
+<style>
+    *{
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    :root{
+        --border: 4px solid; /* Le da valores a los bordes */
+    }
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #db84e5;
+    }
+
+    .buttercup{
+    width: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    /* Cara Burbuja */
+    .cara{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        height: 270px;
+        border: var(--border);
+        background-color: #FFDCC8; /* Color cara */
+        border-radius: 50%; /* Hace cara redonda */
+        overflow: hidden;
+    }
+
+
+    /* Contenedor de los ojos */
+    .ojos {
+        display: flex;
+        justify-content: space-between; /* Separa los ojos */
+        align-items: center; /* Centra verticalmente */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 0 0%; /* Ajusta separación desde los bordes */
+    }
+
+    /* Estilos de los ojos */
+    .ojo {
+        width: 45%;
+        aspect-ratio: 1/1; /* Ancho = alto */
+        border: var(--border);
+        background-color: white; /* Color ojo */
+        border-radius: 50% 50% 50% 50%; /* Hace ojo redondo, 30% 30% 50% 50% */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Para que todo lo que salga del contenedor se esconda */
+    }
+
+    .iris-l{
+        width: 100%;
+        height: 90%;
+        background-color: rgb(98, 216, 82);
+        border-radius: 80%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pupila-l {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Mueve el brillo a la derecha */
+        width: 70%;
+        height: 90%;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    .pupila-l::after {
+        content: "";
+        width: 40%;
+        aspect-ratio: 1/1;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 50%; /* Ajusta la posición del brillo */
+    }
+
+    .iris-r{
+        width: 100%;
+        height: 90%;
+        background-color: rgb(78, 195, 87);
+        border-radius: 80%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pupila-r{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Mueve el brillo a la derecha */
+        width: 70%;
+        height: 80%;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    .pupila-r::after {
+        content: "";
+        width: 40%;
+        aspect-ratio: 1/1;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 50%; /* Ajusta la posición del brillo */
+    }
+
+    .sonrisa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 20px;
+        height: 20px;
+        border: var(--border);
+        border-radius: 50%;
+        border-top: transparent;
+        border-right: transparent;
+        border-left: transparent;
+    }
+
+
+    
+
+</style>
 </head>
 <body>
-    <!--<h1 style="color: aqua; font-size: 35px;">Burbuja</h1> -->
-    <div class="bubble">
-        <div class ="face">
+    <!--<h1 style="color: aqua; font-size: 35px;">Bellota</h1> -->
+    <div class="buttercup">
+        <div class ="cara">
 
-            <div class="eye eye-l">
-                <div class="pupil-l"></div>
+            <!--<div class="fleco">-->
+            <div class="ojos">
+                <div class="ojo">
+                    <div class="iris-l">
+                        <div class="pupila-l"></div>
+                    </div>
+                </div>
+    
+                <div class="ojo">
+                    <div class="iris-r">
+                        <div class="pupila-r"></div>
+                    </div>
+                </div>
             </div>
-
-            <div class="eye eye-r">
-                <div class="pupil-r"></div>
-            </div>
-
-            <div class="smile"></div>
+            
+            <div class="sonrisa"></div>
 
         </div>
-
-        <div class="hair"></div>
-        <div class="hair hair-r"></div>
+         <!--Como la sonrisa pero mas grande y atrás de cara, tal vez haya q ponerlo antes-->
+        <div class="pelo"></div>
+        <div class="pelo pelo-r"></div>
         
     </div>
 </body>
